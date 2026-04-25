@@ -1,0 +1,28 @@
+/* Page-level shells, kept tiny on purpose */
+.page {
+  min-height: 100vh;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-x {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-x {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
