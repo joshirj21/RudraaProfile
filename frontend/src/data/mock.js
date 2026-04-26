@@ -128,8 +128,8 @@ export const projects = [
     tags: ["SaaS", "Components", "HR"],
     cover: "https://images.pexels.com/photos/12738974/pexels-photo-12738974.jpeg",
     accent: "#6B5743",
-    type: "coming-soon",
-    href: "#",
+    type: "external",
+    href: "https://www.figma.com/design/4KrVe5aRr3VWWu7IvsY7nh/Untitled?node-id=0-1&t=DKREJ6SNsf5TAJn6-1",
   },
 ];
 
