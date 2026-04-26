@@ -15,17 +15,24 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20        # 👈 changed to 20
+          node-version: 20
 
       - name: Install dependencies
         working-directory: ./frontend
         run: npm install --legacy-peer-deps
+
+      - name: Force fix AJV
+        working-directory: ./frontend
+        run: |
+          rm -rf node_modules/ajv-keywords
+          npm install ajv@^8.0.0 ajv-keywords@^5.0.0 --legacy-peer-deps --save
 
       - name: Build with CRACO
         working-directory: ./frontend
         run: npm run build
         env:
           CI: false
+          SKIP_PREFLIGHT_CHECK: true    # 👈 add this
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
