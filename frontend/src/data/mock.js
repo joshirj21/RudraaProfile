@@ -91,8 +91,9 @@ export const projects = [
     tags: ["Fintech", "Mobile", "Real-time"],
     cover: "https://images.unsplash.com/photo-1589183440456-34d255090e7b",
     accent: "#5B4B3A",
-    type: "coming-soon",
-    href: "#",
+    type: "external",
+    href: "https://www.figma.com/proto/8olEjPgex0tnQnwwp4NBXK/Tap-trading-app-prototype?node-id=72-3506&t=cXEz4Gukhu7sPObN-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A7",
+    designFileHref: "https://www.figma.com/design/8olEjPgex0tnQnwwp4NBXK/Tap-trading-app-prototype?node-id=0-1&t=0ZbVLnWr4xPepAEd-1",
   },
   {
     id: "icon-set",
