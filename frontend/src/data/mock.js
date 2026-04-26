@@ -41,10 +41,21 @@ export const projects = [
     industry: "Logistics & Transportation",
     year: "2026",
     tags: ["Enterprise", "Design System", "Dashboard", "B2B"],
-    cover: "https://images.pexels.com/photos/28962928/pexels-photo-28962928.jpeg",
+    cover:
+      "https://customer-assets.emergentagent.com/job_resume-showcase-439/artifacts/n5qfh948_Gemini_Generated_Image_atq7i3atq7i3atq7.png",
     accent: "#B5462E",
     type: "case-study",
     href: "/work/wellington-hub",
+    quickLinks: [
+      {
+        label: "View prototype",
+        href: "https://www.figma.com/proto/3jyZwSZduLjLdHq2iSKffH/Untitled?node-id=9-4103&t=nKm3Q0hq6grgtQzy-1",
+      },
+      {
+        label: "Figma file",
+        href: "https://www.figma.com/design/3jyZwSZduLjLdHq2iSKffH/Untitled?node-id=0-1&t=xviEd4szt30uViC6-1",
+      },
+    ],
     metrics: [
       { value: "60%", label: "Faster Onboarding" },
       { value: "83%", label: "Fewer Errors" },
@@ -69,6 +80,16 @@ export const projects = [
     accent: "#8B6F47",
     type: "external",
     href: "https://joshirj21.github.io/smarten/",
+    quickLinks: [
+      {
+        label: "Live site",
+        href: "https://joshirj21.github.io/smarten/",
+      },
+      {
+        label: "Figma file",
+        href: "https://www.figma.com/design/648r79eNbEUZHvtMiuIQoI/Untitled?node-id=0-1&t=8hRAbWcIMk26ZB6H-1",
+      },
+    ],
     metrics: [
       { value: "70%", label: "Less Admin Time" },
       { value: "85%", label: "Engagement Up" },

@@ -1,7 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Figma, ExternalLink, Play } from "lucide-react";
 import { projects } from "../data/mock";
+
+const QuickLinks = ({ links }) => {
+  if (!links || !links.length) return null;
+  const stop = (e) => e.stopPropagation();
+  const iconFor = (label) => {
+    const l = label.toLowerCase();
+    if (l.includes("prototype")) return <Play size={13} className="fill-current" />;
+    if (l.includes("figma")) return <Figma size={13} />;
+    return <ExternalLink size={13} />;
+  };
+  return (
+    <div className="mt-4 flex flex-wrap items-center gap-2">
+      {links.map((l) => (
+        <a
+          key={l.href}
+          href={l.href}
+          target="_blank"
+          rel="noreferrer"
+          onClick={stop}
+          className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-medium rounded-full border border-[color:var(--ink)] text-[color:var(--ink)] bg-[color:var(--cream)] hover:bg-[color:var(--ink)] hover:text-[color:var(--cream)] transition-colors"
+        >
+          {iconFor(l.label)}
+          <span>{l.label}</span>
+          <ArrowUpRight size={13} />
+        </a>
+      ))}
+    </div>
+  );
+};
 
 const CardWrapper = ({ project, children }) => {
   if (project.type === "case-study") {
@@ -129,6 +158,10 @@ const WorkCard = ({ project, large, compact }) => {
             {project.industry}
           </span>
         </div>
+      )}
+
+      {!compact && project.quickLinks && (
+        <QuickLinks links={project.quickLinks} />
       )}
 
       {compact && (
