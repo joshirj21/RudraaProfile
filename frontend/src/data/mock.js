@@ -77,6 +77,11 @@ export const projects = [
     year: "2025",
     tags: ["Mobile", "iOS & Android", "Multi-role", "EdTech"],
     cover: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
+    customCover: "smartizen",
+    coverScreens: [
+      "https://customer-assets.emergentagent.com/job_resume-showcase-439/artifacts/6l40ir6z_smartizen%20app%20new%20requirements.png",
+      "https://customer-assets.emergentagent.com/job_resume-showcase-439/artifacts/2uabasks_smartizen%20app%20new%20requirements-1.png",
+    ],
     accent: "#8B6F47",
     type: "external",
     href: "https://joshirj21.github.io/smarten/",

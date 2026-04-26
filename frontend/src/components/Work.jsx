@@ -50,6 +50,73 @@ const CardWrapper = ({ project, children }) => {
   return <div className="work-card block cursor-default">{children}</div>;
 };
 
+const SmartizenCover = ({ screens }) => {
+  const [splash, welcome] = screens || [];
+  return (
+    <div className="work-card-image absolute inset-0 w-full h-full overflow-hidden">
+      {/* Brand gradient backdrop */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(120% 120% at 100% 0%, #FFE6F2 0%, #F5DCEC 22%, #EDD3F1 45%, #E0BBE8 75%, #C8A2D6 100%)",
+        }}
+      />
+      {/* Soft decorative blobs */}
+      <div
+        className="absolute -top-12 -left-12 w-72 h-72 rounded-full opacity-50 blur-3xl"
+        style={{ background: "radial-gradient(circle, #FFB37A 0%, transparent 65%)" }}
+      />
+      <div
+        className="absolute -bottom-16 -right-10 w-80 h-80 rounded-full opacity-40 blur-3xl"
+        style={{ background: "radial-gradient(circle, #B5279A 0%, transparent 65%)" }}
+      />
+      {/* Halftone grid */}
+      <div
+        className="absolute inset-0 opacity-[0.18] mix-blend-multiply"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, #6E2461 1px, transparent 1px)",
+          backgroundSize: "16px 16px",
+        }}
+      />
+
+      {/* Phones */}
+      <div className="absolute inset-0 flex items-end justify-center gap-3 sm:gap-5 md:gap-7 pt-10 sm:pt-12 md:pt-16 pb-0 px-6">
+        {/* Splash phone */}
+        <div
+          className="relative w-[34%] sm:w-[30%] md:w-[28%] aspect-[9/19] rounded-[18px] overflow-hidden bg-white -rotate-[6deg] translate-y-6 shadow-[0_20px_55px_rgba(110,36,97,0.30)] ring-1 ring-black/5"
+        >
+          <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-12 h-1 rounded-full bg-black/40 z-10" />
+          <img
+            src={splash}
+            alt="Smartizen splash screen"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        {/* Welcome phone */}
+        <div
+          className="relative w-[36%] sm:w-[32%] md:w-[30%] aspect-[9/19] rounded-[18px] overflow-hidden bg-white rotate-[5deg] -translate-y-2 shadow-[0_24px_60px_rgba(110,36,97,0.30)] ring-1 ring-black/5"
+        >
+          <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-12 h-1 rounded-full bg-black/40 z-10" />
+          <img
+            src={welcome}
+            alt="Smartizen welcome / role select"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      {/* Brand chip */}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-white/85 backdrop-blur text-[10px] font-mono uppercase tracking-[0.22em]" style={{ color: "#6E2461" }}>
+        Smartizen &middot; iOS / Android
+      </div>
+    </div>
+  );
+};
+
 const WorkCard = ({ project, large, compact }) => {
   return (
     <CardWrapper project={project}>
@@ -58,17 +125,23 @@ const WorkCard = ({ project, large, compact }) => {
           large ? "aspect-[16/10]" : compact ? "aspect-[4/5]" : "aspect-[4/3]"
         }`}
       >
-        <img
-          src={project.cover}
-          alt={project.title}
-          className="work-card-image absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
-        />
+        {project.customCover === "smartizen" ? (
+          <SmartizenCover screens={project.coverScreens} />
+        ) : (
+          <img
+            src={project.cover}
+            alt={project.title}
+            className="work-card-image absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+        )}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(26,22,18,0.05) 0%, rgba(26,22,18,0.55) 100%)",
+              project.customCover === "smartizen"
+                ? "linear-gradient(180deg, rgba(26,22,18,0) 55%, rgba(26,22,18,0.55) 100%)"
+                : "linear-gradient(180deg, rgba(26,22,18,0.05) 0%, rgba(26,22,18,0.55) 100%)",
           }}
         />
 
