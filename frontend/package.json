@@ -61,7 +61,7 @@
     "build": "craco build",
     "test": "craco test"
   },
-  "homepage": "https://github.com/joshirj21/RudraaProfile",
+  "homepage": "https://joshirj21.github.io/RudraaProfile",
   "browserslist": {
     "production": [
       ">0.2%",
