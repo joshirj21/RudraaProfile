@@ -140,24 +140,23 @@ export const projects = [
     href: "https://joshirj21.github.io/wlngtn/",
   },
   {
-    id: "hrms-components",
-    index: "05",
+    id: "icon-set",
+    index: "04",
     title: "Icon Set",
-    subtitle: "Information-dense Component Library",
+    subtitle: "Custom Scalable UI Iconography",
     summary:
-        "Custom Scalable UI Iconography",
-    role: "UI Designer",
-    duration: "Ongoing",
-    company: "Mindmesh Systems",
-    industry: "SaaS",
-    year: "2026",
-    tags: ["SaaS", "Components", "HR"],
+        "A pixel-snapped icon system designed for product UI — built for clarity at 16px, 20px and 24px with consistent stroke weight.",
+    role: "Designer",
+    duration: "4 Weeks",
+    company: "Independent",
+    industry: "Design System",
+    year: "2024",
+    tags: ["Iconography", "Design System"],
     cover: "https://i.ibb.co/wN6DqjDx/Whats-App-Image-2026-04-26-at-17-13-53.jpg",
-    accent: "#6B5743",
+    accent: "#7A5C3F",
     type: "external",
     href: "https://www.figma.com/design/jWJvmbHWS4GGAkT2UTmNH9/Untitled?m=auto&t=cRFvCrNOPgUimTuo-1",
-
-  },
+  }
 ];
 
 export const experiences = [
