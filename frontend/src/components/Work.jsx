@@ -122,7 +122,7 @@ const WorkCard = ({ project, large, compact }) => {
     <CardWrapper project={project}>
       <div
         className={`relative overflow-hidden rounded-sm ${
-          large ? "aspect-[16/10]" : compact ? "aspect-[4/5]" : "aspect-[4/3]"
+          large ? "aspect-[16/10]" : compact ? "aspect-[5.5/5]" : "aspect-[4/3]"
         }`}
       >
         {project.customCover === "smartizen" ? (

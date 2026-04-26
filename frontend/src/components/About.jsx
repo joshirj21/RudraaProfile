@@ -35,13 +35,13 @@ const About = () => {
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted)] mb-1">
                   Years
                 </div>
-                <div className="font-display text-3xl text-[color:var(--ink)]">3+</div>
+                <div className="font-display text-3xl text-[color:var(--ink)]">1+</div>
               </div>
               <div className="border-t border-[color:var(--rule)] pt-3">
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted)] mb-1">
                   Products shipped
                 </div>
-                <div className="font-display text-3xl text-[color:var(--ink)]">12</div>
+                <div className="font-display text-3xl text-[color:var(--ink)]">7</div>
               </div>
               <div className="border-t border-[color:var(--rule)] pt-3">
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted)] mb-1">
