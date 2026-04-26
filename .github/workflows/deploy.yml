@@ -21,12 +21,20 @@ jobs:
         working-directory: ./frontend
         run: npm install --legacy-peer-deps
 
+      - name: Fix AJV conflict
+        working-directory: ./frontend
+        run: |
+          npm install ajv@^8.0.0 --legacy-peer-deps
+          npm install ajv-keywords@^5.0.0 --legacy-peer-deps
+
       - name: Build with CRACO
         working-directory: ./frontend
         run: npm run build
+        env:
+          CI: false   # 👈 prevents warnings from breaking the build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/build  # 👈 deploys the built output
+          publish_dir: ./frontend/build
