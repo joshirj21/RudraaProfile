@@ -109,8 +109,8 @@ export const projects = [
     tags: ["Iconography", "Design System"],
     cover: "https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg",
     accent: "#7A5C3F",
-    type: "coming-soon",
-    href: "#",
+    type: "external",
+    href: "https://www.figma.com/design/jWJvmbHWS4GGAkT2UTmNH9/Untitled?node-id=0-1&t=pggki7nhMV9MyDP0-1",
   },
   {
     id: "hrms-components",
