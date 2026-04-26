@@ -1,13 +1,11 @@
 {
   "files": {
-    "main.css": "/RudraaProfile/static/css/main.1f4d05c9.css",
-    "main.js": "/RudraaProfile/static/js/main.64bc81bd.js",
-    "index.html": "/RudraaProfile/index.html",
-    "main.1f4d05c9.css.map": "/RudraaProfile/static/css/main.1f4d05c9.css.map",
-    "main.64bc81bd.js.map": "/RudraaProfile/static/js/main.64bc81bd.js.map"
+    "main.css": "/RudraaProfile/static/css/main.eee7c771.css",
+    "main.js": "/RudraaProfile/static/js/main.31e359c6.js",
+    "index.html": "/RudraaProfile/index.html"
   },
   "entrypoints": [
-    "static/css/main.1f4d05c9.css",
-    "static/js/main.64bc81bd.js"
+    "static/css/main.eee7c771.css",
+    "static/js/main.31e359c6.js"
   ]
 }
